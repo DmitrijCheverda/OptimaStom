@@ -1,0 +1,33 @@
+.text_1 {
+  color: blue;
+}
+.text_1:hover {
+  color: #23d1b9;
+  background-color: #61dcd7;
+}
+
+body {
+  background-color: ivory;
+}
+
+.text_2 {
+  background-color: #da9034;
+}
+.text_2:hover {
+  background-color: #61dcd7;
+}
+
+.header_title {
+  font-weight: 25px;
+  width: 50%;
+  text-align: center;
+}
+
+.link {
+  color: blue;
+  text-decoration: underline;
+  font-size: 80px;
+}
+.link:hover {
+  color: red;
+}

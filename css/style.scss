@@ -1,0 +1,51 @@
+//переменные по размеру шрифта
+$fz_1:25px;
+$fz_2:80px;
+$fz_3:120px;
+//переменные по background-colour
+$bgc_1:#645548;
+$bgc_2:#61dcd7;
+$bgc_3:#da9034;
+// переменные по цвету
+$cl_1:#23d1b9;
+$cl_2:#cdd54a;
+
+// шаблон №1
+%tplborder_1{
+	&:hover{
+		color: $cl_1;
+		background-color: $bgc_2;
+	}
+	color: blue;
+}
+body{
+	background-color: ivory;
+}
+// шаблон №2
+%tplborder_2{
+	background-color: $bgc_3;
+	&:hover{
+		background-color: $bgc_2;
+	}
+}
+
+.header_title{
+	font-weight: 25px;
+	width: 50%;
+	text-align: center;
+}
+.link{
+	color: blue;
+	text-decoration: underline;
+	font-size: $fz_2;
+	&:hover{
+		color: red;
+	}
+}
+
+.text_1{
+	@extend %tplborder_1;
+}
+.text_2{
+	@extend %tplborder_2;
+}
