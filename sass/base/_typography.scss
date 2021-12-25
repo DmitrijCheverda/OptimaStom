@@ -1,0 +1,111 @@
+//  подключаем шрифты
+@font-face { font-family: 'GothamPro-Medium';  src: local('GothamPro-Medium'), url('https://nomail.com.ua/files/woff/7099ae8bd4ec17ea6cbaa2ee9a550fe5.woff') format('woff'); }
+@font-face { font-family: 'GothamPro-Light';  src: local('GothamPro-Light'), url('https://nomail.com.ua/files/woff/792e5785377b31db37697448eba44281.woff') format('woff'); }
+@font-face { font-family: 'GothamPro';  src: local('GothamPro'), url('https://nomail.com.ua/files/woff/aafeb23794c0546aa78e6d11e49ef908.woff') format('woff'); }
+@font-face {
+	font-family: 'Superior Title';
+	src: url('../fonts/Superior Title - Bold.eot');
+	src: local('☺'), url('../fonts/Superior Title - Bold.woff') format('woff'), url('../fonts/Superior Title - Bold.ttf') format('truetype'), url('../fonts/Superior Title - Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+%heading {
+    font-family: $font-primary;    
+}
+
+.heading-1 {
+    font-family: $font-primary;
+    font-weight: 900;
+    font-size: clamp(6rem, 10rem, 10rem);
+    color: $color-heading-1;
+    line-height: 1;
+    letter-spacing: 1.2rem;
+    
+    text-shadow:     1px 1px 1px $color-heading-2, 
+                     2px 1px 1px $color-heading-2, 
+                     3px 1.5px 1px $color-heading-2,
+                     4px 2px 1px $color-heading-2,
+                     5px 2.5px 1px $color-heading-2,
+                     6px 3px 1px $color-heading-2,
+                     7px 3.5px 1px $color-heading-2,
+                     8px 4px 1px $color-heading-2,
+                     18px 1px 6px rgba(16,16,16, 0.4),
+                     22px 1px 10px rgba(16,16,16, 0.2),
+                     25px 1px 35px rgba(16,16,16, 0.2),
+                     30px 1px 60px rgba(16,16,16, 0.4);
+   }
+
+.heading-2 {
+    font-family: "Superior Title";
+    font-size: 4rem;
+    color: $color-heading_1;
+    line-height: 1;
+    letter-spacing: 5px;
+    margin-top: 3rem;
+
+}
+
+.heading-3 {
+    font-family:  "Superior Title";
+    display: block;
+    margin: 5rem auto;
+    font-size: 3rem;
+    color: $color-heading_1;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.heading-4 {
+    @extend %heading;
+    font-size: 1.9rem;
+    color: $color-grey-3;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+}
+
+/*.btn {
+    background-color: $color-primary;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    transition: all .2s;
+    
+
+    &:hover {
+        background-color: $color-primary-dark;
+    }
+}
+*/
+
+
+
+
+.line{
+    grid-column: 1 / -1;
+    width: 80vw;
+    margin: 10vh auto 1rem;
+    &::before,
+    &::after {
+        content: "";
+        height: 2px;
+        display: block;
+        background-color: $color-heading_1;
+     }
+
+     @media only screen and (max-width: $bp-medium) {
+        margin-top: 5vh;
+    }
+}
+
+.mb-sm { margin-bottom: 2rem; }
+.mb-md { margin-bottom: 3rem; }
+.mb-lg { margin-bottom: 4rem; }
+.mb-hg { margin-bottom: 8rem; }

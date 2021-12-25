@@ -1,0 +1,59 @@
+// RESPONSIVE BREAKPOINTS
+
+$bp-largest: 75em;   // 1200px;
+$bp-large: 62.5em;   // 1000px;
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
+
+*, 
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: inherit;
+    font-size: 62.5%;                   // 10px/16px = 62.5% -> 1rem = 10px  
+    height: 100%;
+
+    @media only screen and (max-width: $bp-largest) {
+         font-size: 50%;
+    }
+}
+
+body{
+    font-family: "GothamPro";
+    height: 100%;
+    font-weight: 300;
+    line-height: 1.6;  
+    //padding: 1.5rem clamp(1rem, 5%, 3rem);
+       
+}
+
+
+
+img, picture, video, canvas, svg {      //     Improve media defaults
+    display: block;
+    max-width: 100%;
+}
+             
+input, button, textarea, select {      // Remove built-in form typography styles
+    font: inherit;
+  }
+
+p, h1, h2, h3, h4, h5, h6 {         //Avoid text overflows
+    overflow-wrap: break-word;
+  }
+
+
+.container{
+    display: grid;
+    grid-template-rows: 80vh min-content 1fr repeat(6, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]
+    
+}
+
+
